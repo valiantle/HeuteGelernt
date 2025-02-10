@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formular</title>
+</head>
+<body>
+    <form action="https://www.google.com/search">
+        <input type="text" name="q">
+        <input type="hidden" name="lr" value="lang_es">
+        <input type="submit">
+    </form>
+    <hr>
+    <form action="https://formsubmit.co/jojofan@byom.de" method="post">
+         <!-- https://www.byom.de/trashmails/             jojofan@byom.de -->
+        <input name="test">
+        <input type="submit" value="dah">
+    </form>
+    <hr>
+    <form action="https://formsubmit.co/jojofan@byom.de" method="post">
+        <fieldset>
+            <legend>LOGIN</legend>
+            <div>
+                <label for="text-input">acc (max 5 symbol)</label>
+                <input id="text-input" type="text" name="text-input" maxlength="5">
+            </div>
+            <div>
+                <label for="email-input">email</label>
+                <input id="email-input" type="email" name="email">
+            </div>
+        </fieldse>
+        <div> 
+            <input 
+                type="checkbox" 
+                name="checkbox" 
+                id="checkbox-1"
+                value="option1"
+            />
+            <label for="checkbox-1" >Option1</label>
+        </div>
+        <div> 
+            <input 
+                type="checkbox" 
+                name="checkbox" 
+                id="checkbox-2"
+                value="option2"
+            />
+            <label for="checkbox-2" >Option2</label>
+        </div>
+        <div> 
+            <input 
+                type="checkbox" 
+                name="checkbox" 
+                id="checkbox-3"
+                value="option3"
+            />
+            <label for="checkbox-3" >Option3</label>
+        </div>
+        <span>если радио дать разные имена можно будет выбрать все 3 радио разом</span>
+        <div> 
+            <input 
+                type="radio" 
+                name="radio" 
+                id="radio-1"
+                value="option1"
+            />
+            <label for="radio-1" >rad1</label>
+        </div>
+        <div> 
+            <input 
+                type="radio" 
+                name="radio" 
+                id="radio-2"
+                value="option2"
+            />
+            <label for="radio-2" >rad2</label>
+        </div>
+        <div> 
+            <input 
+                type="radio" 
+                name="radio" 
+                id="radio-3"
+                value="option3"
+            />
+            <label for="radio-3" >rad3</label>
+        </div>
+
+
+
+        <input type="submit" value="login">
+    </form>
+    <hr>
+   
+</body>
+</html>

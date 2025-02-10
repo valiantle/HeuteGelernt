@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input:valid {
+            background-color: greenyellow;
+        }
+        
+        
+        input:invalid {
+            background-color: rgb(237, 46, 78);
+        }
+        
+        input:user-invalid{
+            background-color: black;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <form>
+        <input type="text" required minlength="5" maxlength="12">
+        <input type="number" required min="1" max="10" step="3">
+        <button type="submit">da</button>
+    </form>
+    
+</body>
+</html>

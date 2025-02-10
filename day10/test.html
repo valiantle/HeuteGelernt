@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #search-1 {
+            border: 1px solid black;
+            border-radius: 2rem;
+            /* text-align: center; */
+          
+        }
+        input:placeholder-shown {
+            display: flex;
+            color: rgb(134, 158, 110);
+            text-align: end;
+        }
+
+        .fieldstyle {
+            border: 1px solid black;
+            height: 25px;
+            border-radius: 7px;
+        }
+
+        #flexbox-1 {
+            display: flex;
+            flex-direction: column;
+            width: 14rem;
+            height: 7rem;
+            justify-content: space-between;
+        }
+        #searchbutton {
+            border: 1px solid rgb(118, 174, 234);
+            height: 28px;
+            border-radius: 7px;
+            background-color: rgb(149, 205, 243);
+        }
+        #loginbutton1 {
+            background-color: green;
+            border-radius: 7px;
+            height: 28px;
+            width: 90px;
+        }
+        #loginbutton2 {
+            background-color: blueviolet;
+        }
+        .form4x4 {
+            margin-top: 10px;
+            /* padding-top: 10px; */
+        }
+        /* #submitbutton{
+
+        } */
+
+
+       
+
+
+    </style>
+</head>
+<body>
+    <div>
+        <form>
+            <input id="search-1" type="text" placeholder="Search..." maxlength="40">
+        </form>
+    </div>
+    <hr>
+    
+    <div>
+        <form>
+            <input  class="fieldstyle" type="text" placeholder="Search..." maxlength="40">
+            <button id="searchbutton" type="submit">Search</button>
+        </form>
+    </div>
+    <hr>
+
+    <div id="div15">
+        <input class="fieldstyle" type="text" placeholder="E-Mail" maxlength="10">
+        <input class="fieldstyle" type="text" placeholder="Password" maxlength="10">
+        <button id="loginbutton1" type="submit">Login</button>
+    </div>
+    <hr>
+
+    <div id="flexbox-1">
+        <input class="fieldstyle" type="text" placeholder="E-Mail" maxlength="10">
+        <input class="fieldstyle" type="text" placeholder="Password" maxlength="10">
+        <div>
+            <input type="checkbox" name="anmeldenB" id="anmeldenB" value="opt1">
+            <label>Anmelden bleiben</label>
+        </div>
+        <button id="loginbutton2" class="fieldstyle" type="submit">Login</button>
+    </div>
+    <hr>
+    <div>
+        <form style="border:2px solid black; border-radius: 25px; display: flex; flex-direction: column;">
+            <legend style="align-self: center;">What games have you played?</legend>
+            <div>
+                <input class="form4x4" type="checkbox" name="checkbox">
+                <label class="form4x4">Counter Strike 2</label><br>
+
+                <input class="form4x4" type="checkbox" name="checkbox">
+                <label class="form4x4">Apex Legends</label><br>
+
+                <input class="form4x4"  type="checkbox" name="checkbox">
+                <label class="form4x4">Valorant</label><br>
+
+                <input class="form4x4"  type="checkbox" name="checkbox">
+                <label class="form4x4">None of thouse...</label><br>
+            </div>
+            <button id="submitbutton" class="form4x4" style="align-self: center; width: 100px; height: 25px; background-color: rgb(136, 166, 181); border-radius: 5px;">Submit</button>
+        </form>
+    </div>
+    <hr>
+
+    
+</body>
+</html>

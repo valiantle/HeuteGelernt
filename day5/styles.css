@@ -1,0 +1,30 @@
+div {
+    color: green;
+}
+
+.p2 {
+    color: blue;
+}
+
+.d2 {
+    color: red;
+}
+#preor {
+    color: rgb(248, 244, 25)
+}
+
+div div p:nth-child(3) {
+    color: black !important;
+}
+
+
+
+
+
+a[href^="https://www.goo"] {
+    color: green;
+}
+
+a[href$="gle.com"] {
+    color: rgb(223, 2, 2);
+}                  /*DLYA CHEGO ETO NADA*//*DLYA CHEGO ETO NADA*//*DLYA CHEGO ETO NADA*//*DLYA CHEGO ETO NADA*//*DLYA CHEGO ETO NADA*/

@@ -1,0 +1,46 @@
+
+#t1 {
+    border-collapse: collapse;
+}
+
+#t1 td {
+    border: 2px solid black;
+}
+
+#t1 th {
+    border: 2px solid black;
+}
+
+#t1 thead{
+    background-color: rgb(72, 142, 233);
+    color: aliceblue;
+}
+
+#t1 tfoot {
+    background-color: rgb(118, 172, 238);
+}
+
+#t1 td:nth-child(1)/*, th:nth-child(1)*/ {
+    background-color: white;  
+}
+
+
+#t1 .zweite {
+    background-color: rgb(200, 127, 98);
+}
+
+#t2 .zweite {
+    background-color: rgb(115, 185, 128);
+}
+
+#t2 td:nth-child(1), th:nth-child(1) {
+    border-right: 2px solid blue;
+}
+
+#t2 tfoot tr td {
+    border-top: 4px double black;
+}
+
+#t2 thead tr th {
+    border-bottom: 2px solid black;
+}
