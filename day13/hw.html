@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    button {
+        width: 150px;
+        height: 45px;
+        border-radius: 15px;
+        font-size: 25px;
+        text-align: center;
+        box-shadow: 0 0 10px 7px aliceblue;
+        border: 5px solid aliceblue;
+        background-color: rgb(155, 199, 199);
+    }
+    button:hover {
+        background-color: rgb(138, 182, 182);
+        box-shadow: 0 0 20px 15px aliceblue;
+    
+    }
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-around;
+        height: 100vh; /*нужно всегда указывать высоту в сумме с алайн айтемс иначе не будет применятся align-items: center; ,: end;*/
+        /* width: 100vw; */
+
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="colorChangeRed()">red</button>
+    <button onclick="colorChangeBlue()">blue</button>
+    <button onclick="colorChangeGreen()">green</button>
+
+
+    <script>
+        let colorChangeRed = () => document.body.style.backgroundColor = "red";
+        let colorChangeBlue = () => document.body.style.backgroundColor = "blue";
+        let colorChangeGreen = () => document.body.style.backgroundColor = "green";
+    </script>
+</body>
+</html>

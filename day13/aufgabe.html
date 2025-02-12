@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input id="clientfirstname" type="text" placeholder="Firstname">
+    <input id="clientfamilyname" type="text" placeholder="Familyname">
+    <button onclick="fnameplusfname()">LETS GO!!!</button>
+
+
+
+    <h4 id="outputname">User: </h4>
+
+
+    <script>
+        function fnameplusfname() {
+            let firstname = document.getElementById("clientfirstname").value;
+            let familyname = document.getElementById("clientfamilyname").value;
+            document.getElementById("outputname").innerText = "User: " + firstname + " " + familyname;
+        }
+    </script>
+</body>
+</html>
