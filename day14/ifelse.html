@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input id="firstnum" type="number">
+    <input id="secondnum" type="number">
+    <button onclick="dothing()">da</button>
+    <h2 id="output">:</h2>
+
+    <script>
+        function dothing() {
+            let num1 = parseFloat(document.getElementById("firstnum").value)
+            let num2 = parseFloat(document.getElementById("secondnum").value)
+            if (num1 == 0) {
+                document.getElementById("output").innerText = ":" + "sorry cant do it with 0";
+            } else if (num2 == 0) {
+                document.getElementById("output").innerText = ":" + "sorry cant do it with 0";
+            } else {
+                document.getElementById("output").innerText = ":" + "HERE IS RESULTAT...";
+            }
+        }
+    </script>
+</body>
+</html>
