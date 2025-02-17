@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            height: 5000px;
+        }
+        #container1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 150px;
+            height: 150px;
+            background-color: rosybrown;
+        }
+        #img1 {
+            height: 250px;
+            width: 170px;
+        }
+    </style>
+</head>
+<body>
+    <div style="display: flex; justify-content: center; height: 200px;">
+        <button id="button1">1.aufgabe</button>
+        <div id="container1"><p>2.aufgabe</p></div>
+        <input type="text" id="inputSpy" placeholder="3.aufgabe">
+        <img id="img1" src="axeleft.png">
+    </div>
+    <script>
+        function clickOnce() {
+            console.log("you just klicked this button once")
+        }
+        function mouseHover() {
+            console.log("hovered on container1")
+        }
+        document.getElementById("button1").addEventListener("click", (clickOnce));
+        document.getElementById("container1").addEventListener("mouseover", mouseHover);
+
+
+        document.getElementById("inputSpy").addEventListener("input", function(event) { //хукает в консоль все изменения содержимого внутри инпут
+            console.log(event.target.value + "__3.aufgabe")
+        });
+
+        document.addEventListener("keyup", function(event2){ //хукает в консоль нажатые кнопки внутри всей страницы
+            console.log(event2.key + "_key von 4.aufgabe")
+        });
+
+        document.addEventListener("scroll", function(){ //хукает в консоль ивент прокручивания колесика мыши и выводит данные на сколько было проскролено внутри страницы
+            console.log(window.scrollY + "__5.aufgabe")
+        });
+
+        document.getElementById("img1").addEventListener("dblclick", function() { //при двойном нажатии на картинку выводит в консоль текст
+            console.log("you just doubleclicked on image")
+        });
+
+    </script>
+</body>
+</html>

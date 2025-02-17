@@ -22,13 +22,20 @@
         alert("aaaaaaaaaaaaaaaaaaaaaaaaaaa naehal mishkoy")
         console.log("gg noobs")
     }
+    function handleKeyDown() {
+        console.log("push me... and then just touch me... until i get my... satisfaction")
+    }
 
     document.getElementById("button1").addEventListener("click", handleClick);
     document.getElementById("button2").addEventListener("dblclick", handleClick);
     document.getElementById("u1").addEventListener("mouseover", handleMouseOver);
 
 
-    document.addEventListener("keydown", )
+    document.addEventListener("keydown", handleKeyDown);
+
+    document.addEventListener("keydown", function(event){
+        console.log(event.key);
+    });
 
     </script>
 </body>
