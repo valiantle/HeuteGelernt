@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 id="u1">zagolovok za 300</h1>
+    <button id="button1">ia kalendar pereverny</button>
+    <button id="button2">dopple click</button>
+
+    <script> /*если ссылка на фал расположена в верху можно использовать defer после соурса что бы джс прогружался после хтмл страницы не вызывая конфликтов*/
+
+    function handleClick() {
+        alert("button wurde geklickt")
+        console.log("you snooze you loo...gay")
+
+    }
+    function handleMouseOver() {
+        alert("aaaaaaaaaaaaaaaaaaaaaaaaaaa naehal mishkoy")
+        console.log("gg noobs")
+    }
+
+    document.getElementById("button1").addEventListener("click", handleClick);
+    document.getElementById("button2").addEventListener("dblclick", handleClick);
+    document.getElementById("u1").addEventListener("mouseover", handleMouseOver);
+
+
+    document.addEventListener("keydown", )
+
+    </script>
+</body>
+</html>
