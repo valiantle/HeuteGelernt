@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="kontaktformular">
+        <label for="vorname">Vorname</label>
+        <input type="text" id="vorname">
+
+        <label for="nachname">Nachname</label>
+        <input type="text" id="nachname">
+
+        <label for="nachricht">Dein Nachricht</label>
+        <textarea id="nachricht"></textarea>
+
+        <button type="submit">Absenden</button>
+        <input id="checkbox" type="checkbox">
+    
+    </form>
+    <a id="deeezlink" href="https://www.google.com/">push me and then just touch me</a>
+    <script>
+        const deeezLink = document.getElementById("deeezlink");
+        const formular = document.getElementById("kontaktformular");
+        const checkbox = document.getElementById("checkbox");
+
+        deeezLink.addEventListener("click", function(event){ //есои галочка поставлена в инпуте чекбокс то выключает ссылку *превентдефаулт евент, и выдает сообщение в консоль что ссылка была нажата
+            if (!checkbox.checked) {                            // НО НО НО НО если поставить знак ! перед чекбокс констой, это инвертирует далее сказанное конкретно. чекед т.е. ссылка будет работать при нажатой галочке и не будет при не нажатой
+                event.preventDefault();
+                console.log("Link wurde gecklikt");
+            }
+        })
+
+        formular.addEventListener("submit", function(event){
+            event.preventDefault(); //это делается в основном для тестов что бы страница не обновлялась стирая данные введенные в форму *превентдефаулт ивент или реакцию на элемент
+            
+            const vorname = document.getElementById("vorname").value;
+            const nachname = document.getElementById("nachname").value;
+            const nachricht = document.getElementById("nachricht").value;
+
+            // console.log(vorname + "_vorname");
+            // console.log(nachname + "_nachname");
+            // console.log(nachricht + "_nachricht");
+
+            console.table([{Vorname: vorname, Nachname: nachname, Nachricht: nachricht}]) //пакует данные из вариаблов форнаме нахнаме нахришт в таблицу внутри консоли
+
+        });
+
+    </script>
+</body>
+</html>
