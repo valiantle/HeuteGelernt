@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+    // FOR LOOPS
+
+        for (let i = 250; i >= 1; i--)  { //for (1 стартовое значение цикла;  
+            // console.log(i);                //     2 финишное значение цикла через логику"до тех пор пока i > или равно финиш значениию";
+        }                                  //     3 шаг цикла если шаг равен 1 в минус или плюс пишется i++ or i-- если больше единицы то i = i+69)
+                                          //<!--ну и консоль лог запрашивает значение и на протяжении каждого шага в цикле что можно было бы заменить на формулу исполнения чего либо внутри этого цикла-->
+        for (let i = 1; i<=10; i++) {    
+        //   console.log(i*i)           //будет прибавлять к базовой и 1 до 10 и выводить результат i*i каждого шага
+        }
+
+        for (let i= 100; i>=50; i--) {
+            // console.log(i)
+        }
+
+    // WHILE LOOPS
+        let letCount = true;    // создаем вариабл со значением тру что бы обозначить стартовое значение которое в последствии изменится на фалс при что бы остановить цикл *достигнув нужного порога
+        let i = 1;              //стартовое значение
+        while (letCount) {      //пока леткоунт по логике равен true (изначально заданый выше) функция будет подворятся бесконечно
+            if (i >= 99) {      //через если задаем конец по логике * если и становится больше или равно 99 меняем ниже вариабл значение на фальс останавливая цикл
+                letCount = false;
+            }
+            // console.log(i)
+            i = i+2
+        }
+
+        let a = 1;              // тоже самое что и сверху только проще
+        while (a <= 100) {
+            // console.log(a)
+            a = a + 2;
+        }
+
+    // DO WHILE LOOPS
+        
+        let b = 1;
+        do {
+            // console.log(b);
+            b = b+2;
+
+        } while (b <= 100);
+
+
+
+        let counter = 3;
+        let reply;
+        do {
+            reply = prompt('asnwer: 123321')
+            if (reply === "123321") {
+                console.log("richtig answer let me hug you =3");
+                break;
+            } else (counter > 0) 
+                counter--;
+            if (counter === 0) {
+                alert('to much wrong answers')
+                console.log("bruh")
+                break;
+            }
+        } while (reply !== "123321");
+
+
+        
+    </script>                              
+</body>
+</html>
