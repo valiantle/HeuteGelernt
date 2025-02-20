@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button id="b1"></button>
+    <button id="b2"></button>
+    <button id="b3"></button>
+    <button id="b4"></button>
+
+
+    <script>
+        let animals = ["cat", "capibara", "panda"];
+        console.log(animals);
+        console.log(animals[0]);
+
+        let buttons = [document.getElementById("b1").id, document.getElementById("b2").id, document.getElementById("b3").id, document.getElementById("b4").id];
+        console.log(buttons[0], buttons[2]);
+
+        let cities = ["Berlin","Hamburg","Braunschweig","Karlsruhe"];
+        cities[2] = "Hannover";
+        console.log(cities);
+
+        // push добавляет обьект в конце массива
+        // pop удаляет последний обьект
+        // unshift добавляет обьект в начало массива
+        // shift удаляет первый обьект
+
+        let peoples = [["maxim", 15, "cheliabinsk"], ["pasha", 10, "harkov"], ["vovan", 30, "zarusskih(madi in ukrain btw)"]];
+        console.log(peoples);
+        for (let i = 0; i < peoples.length; i++) {
+            console.log(peoples[i]);
+            for (let j = 0; j < peoples[i].length; j++) {
+                console.log(peoples[i][j]);
+            }
+
+        }
+        
+        // 10 имен как обьект отсортировать имена по цифрам и настроить вывод имен которые длиннее например чем 5 букв, так же настроить остановку на опреленном имени например 7ом
+
+        for (let i = 1; i <= 20; i++) {
+            if (i%3 === 0) {
+                continue;
+            } if (i >= 15) {
+                console.log("noob")
+                break;
+            }
+            console.log(i);
+        }
+
+    </script>
+</body>
+</html>
