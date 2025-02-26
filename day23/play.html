@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let upperHourglass = [];
+        let lowerHourglass = [];
+        let sandBlock = [];
+        //make 20 blocks of sand like this ----- sandBlock1 = [rowSand1, rowSand2, rowSand3, rowSand4] inside upperHouerglass
+        for (let i = 1; i < 21; i++) {
+
+            for (let j = 1; j < 5; j++) {
+                sandBlock.push("rowSand" + [j])
+            }
+            upperHourglass.push("SB_" + [i] + [sandBlock]);
+            sandBlock = [];
+
+        }
+        console.log(upperHourglass);
+
+
+        let n = 0;                              // only 10 cicles of changing upperInhalt to lowerInhalt
+        while (n < 10) {
+            if (upperHourglass.length === 20 && n < 10) { // when upperglass get 20 blocks copyes them to lower glas and then clears upper one
+                n = n + 1
+                for (let i = 0; i < 20; i++) {
+                    lowerHourglass.push(upperHourglass[i]);
+                }
+                upperHourglass = [];
+                console.log("upperHourglass is empty"+n);
+            }
+
+            if (lowerHourglass.length === 20&& n < 10) {   // when lowergas get 20 blocks start same cicle with copying all of the blocks to upper glass and then clears lowerInhalt
+                for (let i = 0; i < 20; i++) {
+                    upperHourglass.push(lowerHourglass[i]);
+                }
+                lowerHourglass = [];
+                console.log("lowerHourglas is empty" + n);
+            }
+        }
+
+    </script>
+</body>
+
+</html>
