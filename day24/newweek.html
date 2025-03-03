@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <input id="hght" type="number" placeholder="height">
+    <input id="wght" type="number" placeholder="weight">
+    <button id="b1">bmi</button>
+
+
+    <p id="output">
+
+    </p>
+
+    <script>
+        document.getElementById("b1").addEventListener("click", function(){
+            let x = document.getElementById("hght").value
+            let y = document.getElementById("wght").value
+            if(y/(x*x) < 18.5) {
+                document.getElementById("output").innerHTML = "BMI=" + y/(x*x) + "__untergewicht"
+            } else if (y/(x*x) < 25.4) {
+                document.getElementById("output").innerHTML =  "BMI=" + y/(x*x) + "__normalgewicht"
+            } else if (y/(x*x) < 30) {
+                document.getElementById("output").innerHTML =  "BMI=" + y/(x*x) + "__ubergewicht"
+            } else {
+                document.getElementById("output").innerHTML =  "BMI=" + y/(x*x) + "__adipositas"
+            }
+        })
+    </script>
+</body>
+</html>
