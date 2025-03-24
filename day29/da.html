@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #mainDiv {
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="mainDiv">
+        <div id="firstDiv">
+            <p>item1</p>
+            <p>1 eu</p>
+            <button id="but1">add</button>
+        </div>
+        <div id="secondDiv">
+            <p>item2</p>
+            <p>2 eu</p>
+            <button>add</button>
+        </div>
+        <div id="thirdDiv">
+            <p>item3</p>
+            <p>3 eu</p>
+            <button id="but3">add</button>
+        </div> 
+    </div>
+    <hr>
+    <h1>WARENKORB:</h1>
+
+    <table >
+        <thead>
+            <tr>
+                <th>name</th>
+                <th>price</th>
+                <th>amount</th>
+                <th>price for this amount</th>
+                <th>button</th>
+            </tr>
+        </thead>
+        <tbody id="warenTable">
+            
+        </tbody>
+    </table>
+    <hr>
+    <span id="sumOutput"></span>
+    <script>
+        const warenkorb = [];
+        //добавляет в корзину новые обьекты или меняет колличество уже имющихся
+        document.getElementById("mainDiv").addEventListener("click", function (event){
+            if (event.target.tagName === "BUTTON") {
+                event.preventDefault();
+                let parentDiv = event.target.closest("div")
+                let name = parentDiv.querySelector("p:nth-of-type(1)").textContent;
+                let priceText = parentDiv.querySelector("p:nth-of-type(2)").textContent;
+                let price = parseFloat(priceText);
+                for( let i = 0; i < warenkorb.length; i++) {
+                    if (warenkorb[i].name === name) {
+                        warenkorb[i].count = warenkorb[i].count + 1
+                        calcSum ()
+                        createHtml ()
+                        return;
+                    }  
+                }
+                let newObj = {
+                        name: name,
+                        price: price,
+                        count: 1
+                    }
+                warenkorb.push(newObj)
+                calcSum ()
+                createHtml ()
+            }
+        });
+        //будет расчитывать финальную сумму для отображения в низу самом
+        function calcSum () {
+            let summ = 0
+            for (let i = 0; i< warenkorb.length; i++) {
+                summ += warenkorb[i].price * warenkorb[i].count;
+            }
+            let sumOutput = document.getElementById("sumOutput")
+            sumOutput.textContent = "Total price : " + summ + "eu"
+        };
+        function createHtml () {
+            const table = document.getElementById("warenTable");
+            table.innerHTML = "";
+            warenkorb.forEach(function(item) {
+
+                const newRow = document.createElement("tr");
+                newRow.innerHTML = 
+                `<td>${item.name}</td>
+                <td>${item.price}</td>
+                <td>${item.count}</td>
+                <td>${item.count*item.price}</td>
+                <td><button name='BUTTON' data-id='${item.name}'>X</button></td>`
+                table.appendChild(newRow)
+            });
+        };
+        //по нажатию кнопки проверять колличество если оно равно единице удалять полностью обьект и вызывать хтл функцию в другом случае удалять 1 из колличества и так же вызывать хтмл функци в конце
+        document.getElementById("warenTable").addEventListener("click", function (event) {
+            if (event.target.tagName === "BUTTON") {
+                event.preventDefault()
+                let butId = event.target.dataset.id;
+                for (let i = 0; i < warenkorb.length; i++) {
+                    if (warenkorb[i].name === butId && warenkorb[i].count > 1) {
+                        warenkorb[i].count -= 1
+                        calcSum ()
+                        createHtml ()
+                    } else if (warenkorb[i].name === butId && warenkorb[i].count === 1) {
+                        warenkorb.splice(i, 1);
+                        calcSum ()
+                        createHtml ()
+                        break;
+                    }
+                }
+            }
+        })
+
+    </script>
+</body>
+</html>
