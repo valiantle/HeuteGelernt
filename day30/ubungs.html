@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+
+
+    <script>
+        const tasks =  [
+            { name: 'Wasche waschen', done: false },
+            { name: 'Kopfstand uben', done: true },
+            { name: 'Einkauf gehen', done: false }
+        ]
+        function header() {
+            const h1 = document.createElement("h1");
+            h1.innerHTML = "ToDo"
+            return h1;
+        }
+
+        function taskList(tasks) {
+            const ul = document.createElement("ul");
+
+            tasks.forEach(function(task, idx) {
+                ul.appendChild(taskItem(task));
+            });
+
+        return ul;
+        }
+
+        function taskItem(task) {
+            const li = document.createElement("li");
+            li.innerHTML = task.name
+            return li;
+        }
+
+        function app() {
+            document.body.appendChild(header());
+            document.body.appendChild(taskList(tasks));
+        }
+        app()
+    </script>
+</body>
+</html>
